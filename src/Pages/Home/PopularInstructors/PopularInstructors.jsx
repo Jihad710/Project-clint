@@ -10,7 +10,7 @@ const PopularInstructors = () => {
     const { data: instructorsMentor = [], } = useQuery({
         queryKey: ['instructors', ],
         queryFn: async () => {
-          const res = await axios.get(`https://melody-school-server-jihad710.vercel.app/instructors`)
+          const res = await axios.get(`https://music-school-server-jihad710.vercel.app/instructors`)
           return res.data;
         }
       });

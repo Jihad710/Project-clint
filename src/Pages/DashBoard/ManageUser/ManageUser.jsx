@@ -3,7 +3,8 @@ import { useQuery } from '@tanstack/react-query';
 import { Helmet } from 'react-helmet-async';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import useAxiosSecure from '../../../components/hooks/useAxiosSecure';
+import useAxiosSecure from '../../../Components/Hooks/useAxiosSecure';
+
 
 
 
@@ -23,7 +24,7 @@ const ManageUsers = () => {
 
 
   const handleMakeAdmin = async (id) => {
-    axios.patch(`https://melody-school-server-jihad710.vercel.app/users/admin/${id}`)
+    axios.patch(`https://music-school-server-jihad710.vercel.app/users/admin/${id}`)
         .then(res=>{
             if(res.data.modifiedCount){
                 refetch()
@@ -43,7 +44,7 @@ const ManageUsers = () => {
   
 
   const handleMakeInstructor = async (id) => {
-    axios.patch(`https://melody-school-server-jihad710.vercel.app/users/instructor/${id}`)
+    axios.patch(`https://music-school-server-jihad710.vercel.app/users/instructor/${id}`)
         .then(res=>{
             if(res.data.modifiedCount){
                 refetch()

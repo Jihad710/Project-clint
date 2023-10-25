@@ -2,8 +2,9 @@ import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } fr
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { Fade } from 'react-awesome-reveal';
-import useAuth from '../../../components/hooks/useAuth';
+
 import Swal from 'sweetalert2';
+import useAuth from '../../../Components/Hooks/useAuth';
 
 const PopularClasses = () => {
   const { user } = useAuth();
@@ -11,7 +12,7 @@ const PopularClasses = () => {
   const { data: classes = [], refetch } = useQuery({
     queryKey: ['classes'],
     queryFn: async () => {
-      const res = await axios('https://melody-school-server-jihad710.vercel.app/popularClasses');
+      const res = await axios('https://music-school-server-jihad710.vercel.app/popularClasses');
       return res.data;
     }
   });
@@ -37,7 +38,7 @@ const PopularClasses = () => {
       instructorName: item.InstructorName
     };
 
-    axios.post('https://melody-school-server-jihad710.vercel.app/selectClass', selectClass)
+    axios.post('https://music-school-server-jihad710.vercel.app/selectClass', selectClass)
       .then(res => {
         if (res.data.insertedId) {
           refetch();

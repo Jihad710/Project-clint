@@ -7,7 +7,7 @@ import useAuth from './useAuth';
 
 
 const axiosSecure = axios.create({
-    baseURL: 'https://melody-school-server-jihad710.vercel.app',
+    baseURL: 'https://music-school-server-jihad710.vercel.app',
   });
 
 const useAxiosSecure = () => {

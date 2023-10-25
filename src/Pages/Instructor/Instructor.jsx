@@ -5,11 +5,12 @@ import axios from 'axios';
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 import { Fade} from 'react-awesome-reveal';
 import { Helmet } from 'react-helmet';
-import useAuth from '../../components/hooks/useAuth';
+
 
 import { useState } from 'react';
 import { useCallback } from 'react';
 import { useQuery } from "@tanstack/react-query";
+import useAuth from '../../Components/Hooks/useAuth';
 
 const InstructorsMentor = () => {
   const [ setClassesInfo] = useState([]);
@@ -18,7 +19,7 @@ const InstructorsMentor = () => {
 
   const InstructorDetails = async (email) => {
     setIsCollapseLoading(true);
-    const res = await axios.get(`https://melody-school-server-jihad710.vercel.app/classes/${email}`);
+    const res = await axios.get(`https://music-school-server-jihad710.vercel.app/classes/${email}`);
     console.log(res.data);
     setClassesInfo(res.data);
     setIsCollapseLoading(false);
@@ -29,7 +30,7 @@ const InstructorsMentor = () => {
   const { data: instructorsMentor = [],  } = useQuery({
     queryKey: ['instructors', user?.email],
     queryFn: async () => {
-      const res = await axios.get(`https://melody-school-server-jihad710.vercel.app/instructors`)
+      const res = await axios.get(`https://music-school-server-jihad710.vercel.app/instructors`)
       return res.data;
     }
   });

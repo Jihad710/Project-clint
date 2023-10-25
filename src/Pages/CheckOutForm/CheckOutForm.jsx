@@ -1,8 +1,10 @@
 import {  CardElement, useElements, useStripe,  } from '@stripe/react-stripe-js';
 import  { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
-import useAuth from '../../components/hooks/useAuth';
-import useAxiosSecure from '../../components/hooks/useAxiosSecure';
+
+
+import useAuth from '../../Components/Hooks/useAuth';
+import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
 
 const CheckOutForm = ({selectedClass}) => {
    const {_id,price,instructorName,classID} = selectedClass || {}

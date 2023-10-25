@@ -12,7 +12,7 @@ const useInstructor = () => {
     queryKey: ["isInstructor", user?.email],
     enabled: !!user?.email  && !loading,
     queryFn: async () => {
-      const res = await axios.get(`https://melody-school-server-jihad710.vercel.app/users/instructor/${user?.email}`);
+      const res = await axios.get(`https://music-school-server-jihad710.vercel.app/users/instructor/${user?.email}`);
       return res.data.instructor;
     }
   },);

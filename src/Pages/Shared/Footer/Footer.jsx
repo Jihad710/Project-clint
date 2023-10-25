@@ -16,14 +16,14 @@ const Footer = () => {
           <div className="w-full md:w-1/3 lg:w-1/4 mb-8">
             <div className="mb-4">
               <h4 className="text-lg font-bold mb-2">Contact</h4>
-              <p>Email: Jihadmahmud@gmail.com</p>
+              <p>Email: nazninnahar@gmail.com</p>
               <p>Phone: +1 123-456-7890</p>
             </div>
           </div>
           <div className="w-full md:w-1/3 lg:w-1/4 mb-8">
             <div className="mb-4">
               <h4 className="text-lg font-bold mb-2">Address</h4>
-              <p>West Agargaon </p>
+              <p>Mirpur 1 </p>
               <p>Dhaka Bangladesh</p>
             </div>
           </div>
@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="flex flex-wrap">
           <div className="w-full">
             <div className="text-center">
-              <p className="text-sm">&copy; 2023 Melody School. All rights reserved.</p>
+              <p className="text-sm">&copy; 2023 Melody Music School. All rights reserved.</p>
             </div>
           </div>
         </div>

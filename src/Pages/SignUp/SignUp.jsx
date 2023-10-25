@@ -17,7 +17,7 @@ const SignUp = () => {
   const onSubmit = (data) => {
     console.log(data);
     createUser(data.email, data.password)
-    axios.post('https://melody-school-server-jihad710.vercel.app/users',{name: data.name, email:data.email, photo:data.photoURL })
+    axios.post('https://music-school-server-jihad710.vercel.app/users',{name: data.name, email:data.email, photo:data.photoURL })
     .then(result => {
      
 

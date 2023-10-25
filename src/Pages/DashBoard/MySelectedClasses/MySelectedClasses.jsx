@@ -4,8 +4,9 @@ import { Link, useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 import useSelectedClasses from '../../../components/hooks/useSelectedClasses';
-import useAuth from '../../../components/hooks/UseAuth';
+
 import { MdDeleteOutline, MdPayment } from 'react-icons/md';
+import useAuth from '../../../Components/Hooks/useAuth';
 
 
 const SelectedClasses = () => {

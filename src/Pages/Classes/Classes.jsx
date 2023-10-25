@@ -4,10 +4,12 @@ import { Fade} from 'react-awesome-reveal';
 
 import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import useAxiosSecure from '../../components/hooks/useAxiosSecure';
+
 
 import { Helmet } from 'react-helmet';
-import useAuth from '../../components/hooks/useAuth';
+
+import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
+import useAuth from '../../Components/Hooks/useAuth';
 
 const Classes = () => {
 
@@ -20,7 +22,7 @@ const Classes = () => {
   const { data: classes = [], refetch } = useQuery({
     queryKey: ['classes'],
     queryFn: async () => {
-      const res = await axios(`https://melody-school-server-jihad710.vercel.app/approveClasses`)
+      const res = await axios(`https://music-school-server-jihad710.vercel.app/approveClasses`)
       return res.data;
     }
   })
@@ -47,7 +49,7 @@ const Classes = () => {
         instructorName : item.InstructorName 
       }
       console.log(selectClass)
-      axios.post('https://melody-school-server-jihad710.vercel.app/selectClass', selectClass)
+      axios.post('https://music-school-server-jihad710.vercel.app/selectClass', selectClass)
       .then(res=>{
         if(res.data.insertedId){
           refetch()
