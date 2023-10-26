@@ -4,7 +4,8 @@ import Swal from 'sweetalert2';
 
 
 import useAuth from '../../Components/Hooks/useAuth';
-import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
+import useAxiosSecure from '../../components/hooks/useAxiosSecure';
+
 
 const CheckOutForm = ({selectedClass}) => {
    const {_id,price,instructorName,classID} = selectedClass || {}

@@ -1,6 +1,3 @@
-
-
-
 import axios from 'axios';
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 import { Fade} from 'react-awesome-reveal';
